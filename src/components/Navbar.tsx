@@ -1,6 +1,12 @@
+import {Navbar as NavbarBs, Container} from "react-bootstrap";
 
 export const Navbar = () => {
   return (
-    <div>Navbar</div>
+    <NavbarBs className="bg-white shadow-sm mb-3">
+        <Container>
+            Nav
+        </Container>
+    </NavbarBs>
+
   )
 }
