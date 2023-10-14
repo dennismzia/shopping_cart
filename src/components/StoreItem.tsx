@@ -22,16 +22,23 @@ export const StoreItem = ({id, name , price, imgUrl}: StoreItemProps) => {
             </Card.Title>
             <div className="mt-auto">
                 {
-                    quantity === 0 ? 
+                    quantity === 1 ? 
                     <Button className="w-100">
                         + Add To Cart
                     </Button>
                     : 
                     <div className="d-flex align-items-center flex-column" style={{gap: ".5rem"}}>
                         <div className="d-flex align-items-center justify-content-center" style={{gap: ".5rem"}}>
-                            Hi
+
+
+                            <Button>-</Button>
+                            <div>
+                                <span className="fs-3">{quantity}</span> in cart
+                            </div>
+                            <Button>+</Button>
+                        
                         </div>
-                        bye
+                        <Button variant="danger" size="sm">Remove</Button>
                     </div>
 
                 }
