@@ -1,4 +1,4 @@
-# shopping cart in react. 
+# shopping cart (reac and typescript) 
  
  screenshots
 
