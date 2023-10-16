@@ -32,6 +32,7 @@ export const useshoppingCart = () => {
 export const ShoppingCartProvider = ({children}:shoppingCartProviderProps) => {
     const [cartItems, setCartItems] = useState <CartItem[]>([])
 
+    const cartQuantity = cartItems.reduce((quantity, item)=> item.quantity + quantity, 0)
 
     const getItemQuantity = (id:number) => {
         return cartItems.find(item => item.id === id)?.quantity || 0
@@ -81,7 +82,8 @@ export const ShoppingCartProvider = ({children}:shoppingCartProviderProps) => {
             getItemQuantity,
             increaseCartQuantity,
             decreaseCartQuantity,
-            removeFromCart
+            removeFromCart,
+            cartItems
         }}>
             {children}
         </shoppingCartContext.Provider>
