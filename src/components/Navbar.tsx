@@ -4,9 +4,10 @@ import { useshoppingCart } from "../context/ShoppingCartContext";
 
 export const Navbar = () => {
   const {
-    opencart,
+    openCart,
     cartQuantity
-  } = useshoppingCart
+  } = useshoppingCart()
+
   return (
     <NavbarBs sticky="top" className="bg-white shadow-sm mb-3">
         <Container>
