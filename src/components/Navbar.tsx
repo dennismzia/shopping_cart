@@ -18,7 +18,8 @@ export const Navbar = () => {
             </Nav>
             <Button style={{width: "3rem", height:"3rem", position:"relative"}}
             variant="outline-primary"
-            className="rounded-circle">
+            className="rounded-circle"
+            onClick={openCart}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 576 512"
@@ -38,7 +39,7 @@ export const Navbar = () => {
             }}
             
             >
-              3
+              {cartQuantity}
             </div>
             </Button>
         </Container>
