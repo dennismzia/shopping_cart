@@ -1,7 +1,11 @@
-import React from 'react'
+import { Offcanvas } from 'react-bootstrap'
 
 export const ShoppingCart = () => {
   return (
-    <div>ShoppingCart</div>
+    <Offcanvas show={true} placement="end">
+        <Offcanvas.Header closeButton>
+            <Offcanvas.Title>Cart</Offcanvas.Title>
+        </Offcanvas.Header>
+    </Offcanvas>
   )
 }
