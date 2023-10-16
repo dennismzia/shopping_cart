@@ -31,7 +31,7 @@ export const StoreItem = ({id, name , price, imgUrl}: StoreItemProps) => {
             </Card.Title>
             <div className="mt-auto">
                 {
-                    quantity === 1 ? 
+                    quantity === 0 ? 
                     <Button className="w-100" onClick={() => increaseCartQuantity(id)}>
                         + Add To Cart
                     </Button>
