@@ -96,7 +96,7 @@ export const ShoppingCartProvider = ({children}:shoppingCartProviderProps) => {
             cartQuantity,
         }}>
             {children}
-            <ShoppingCart />
+            <ShoppingCart isOpen={isOpen}/>
         </shoppingCartContext.Provider>
     )
 
