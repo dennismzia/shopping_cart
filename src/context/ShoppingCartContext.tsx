@@ -28,8 +28,16 @@ export const useshoppingCart = () => {
 export const ShoppingCartProvider = ({children}:shoppingCartProviderProps) => {
     const [cartItems, setCartItems] = useState <CartItem[]>([])
 
+
+    const getItemQuantity = (id:number) => {
+        return cartItems.find(item => item.id === id)?.quantity || 0
+
+    }
+
     return(
-        <shoppingCartContext.Provider value={{}}>
+        <shoppingCartContext.Provider value={{
+            getItemQuantity
+        }}>
             {children}
         </shoppingCartContext.Provider>
     )
