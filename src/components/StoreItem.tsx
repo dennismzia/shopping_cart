@@ -5,7 +5,7 @@ import { useshoppingCart } from "../context/ShoppingCartContext";
 type StoreItemProps = {
     id: number,
     name: string,
-    price: number,
+    price: number, 
     imgUrl: string
 }
 
